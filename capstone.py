@@ -21,7 +21,7 @@ Roles = st.slider("Similar role idea in marriage", 0, 4)
 
 if st.button('Predict'):
     prediction = model.predict(np.array([[Idk_whats_going_on, Anxieties, Accusations, Hopes_wishes, Happy, Good_to_leave_home, Begin_correct, Aggro_argue, Trust, Roles]]))
-    if prediction == 0:
+    if prediction == 1:
         st.write('More likely to stay together')
     else:
         st.write('More likely to Divorce')
